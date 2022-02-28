@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>SDG Recommendation</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+
+
+
+    <style>
+
+        body { 
+        width: 100%;
+        background-image: url('images/SDG.png');
+        font-family: 'Open Sans', sans-serif;
+        background: #092756;
+        color: #fff;
+        font-size: 20px;
+        text-align: left;
+        letter-spacing:1.2px;
+       
+        }
+        .login1 { 
+            position: absolute;
+            top: 20%;
+            left:20%;
+            margin: -150px 0 0 -150px;
+            width:100%;
+            height:800px;
+        }
+
+    </style>
+
+
+    
+    
+    
+    
+</head>
+
+<body>
+<br>
+
+ <div class="login1">
+	
+<br><br>
+<br><br>
+
+            
+     <h2>Most Recommended SDG <br>{{sdg1}}</h2><br>
+     
+     <img src="static/{{pic1}}.png?anyValueHere12345" alt="" style="width:350px; margin-left: 30px; float: left;">
+     <br>
+     
+     <h3 style="margin-left: 250px; float: left" >Second Recommended SDG<br>{{sdg2}}</h3>  
+     <img src="static/{{pic2}}.png?anyValueHere12345" alt="" style="width:200px; margin-left: 300px; float: left;">
+       
+       
+ 
+
+   <br>
+   <br>
+  
+   
+ </div>
+
+</body>
+</html>

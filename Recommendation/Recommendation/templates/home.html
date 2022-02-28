@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Summary Creator</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+
+</head>
+
+	<style>
+		body{
+			text-align: center;
+		}
+		
+		.login{
+			margin-left: 27%;
+            width : 45%;
+			
+		}
+		
+		.input{
+			width: 100%;
+			font-size: 13px;
+		}
+        .button{
+            width:40%;
+        }
+	
+	</style>
+	
+<body>
+
+
+ <div class="login">
+     
+     
+	<h1>Summary Creator</h1>
+<br><br>
+     <!-- Form to enter new data to analyze  -->
+    <form action='/analyze' method="POST" enctype="multipart/form-data">
+            
+   
+        <label for="files">Select files:(.pdf)</label>
+        <input type="file" id="fileUpload" name="file[]" onchange="selectFolder(event)" accept=".pdf"  multiple = '' />
+        
+        
+        <button type="submit" class="btn btn-primary btn-block btn-large">Summarize</button>
+        
+     </form>
+     
+     
+     <br><br><br>
+        
+    <form action='/table_analyze' method="POST" enctype="multipart/form-data">   
+
+        <label for="tables">Select files with tables:(.pdf)</label>
+        <input type="file" id="fileUpload" name="table[]" onchange="selectFolder(event)" accept=".pdf"  multiple = '' />
+        
+        <button type="submit" class="btn btn-primary btn-block btn-large">Summarize</button>
+        <!--<script type="text/javascript">
+        function getFilePath(){
+            $('input[type=file]').change(function () {
+            console.log(this.files[0].mozFullPath);
+
+             });
+        }
+        </script>
+        
+        <p>Click the button below do the display the file path of the file upload button above (you must select a file first).</p>   
+        
+        
+        <p id="demo"></p>
+
+        <script>
+        function myFunction() { 
+          var x = document.getElementById("fileUpload").value;
+          document.getElementById("demo").innerHTML = x;
+        }
+        </script>
+        -->
+        
+        
+    </form>
+ 
+
+   <br>
+   <br>
+  
+   
+ </div>
+
+</body>
+</html>
